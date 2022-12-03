@@ -1,13 +1,13 @@
-#Create Database and Tables
+# Create Database and Tables
 
-#Insert Statements
+# Insert Statements
 
-#User Queries
+# User Queries
 
-#Views
+# Views
 
-#Procedures
+# Procedures
+ 
+# Triggers
 
-#Triggers
-
-#User Groups and Roles
+# User Groups and Roles

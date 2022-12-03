@@ -77,17 +77,17 @@ Create Table SupplierSupplies(
 
 # Insert Statements
 ## Suppliers
-INSERT Into Suppliers (SupplierName, ContactAddress, ContactEmail) VALUES 
-('Home Depot', '1518 S Providence Center Dr, Cedar City, UT 84720', 'Gerard@homedepot.com')
-('Small Town Suppliers', '15 E 100 S, Kansas City, KS 66012', 'AmeliaBedila@yahoomail.com'),
-('This and That', 'PO Box 3345, Soda Springs, ID 83276', 'happygolucky@gmail.com'),
-('Storefront Suppliers',' 1436 N 300 W, New York, NY 10001','stevensharp@storefrontsuppliers.org'),
-('Silly Strings Suppliers','PO Box 1123, New York, NY 10005','sillystringsrep@sillystringsuppliers.com'),
-('Region Supplier','13, Jalan SS 26/8, Taman Mayang Jaya, 47301 Petaling Jaya, Selangor, Malaysia','chen@regionalsuppliers.org'),
-('Serra Forest Products','316 E 1400 S Suite B1, St. George, UT 84790','JamesMontrose@sierraforestproducts.com'),
-('HP','10300 Energy Dr, Spring, TX 77389','carsonford@hpinc.com'),
-('Hartlauer',' 3900 W Dewey Dr, Las Vegas, NV 89118','donjuan@hartlauer.com'),
-('Multicam','DFW Airport, 1025 W Royal Ln, Dallas, TX 75261','juanrodriges@multicam.com')
+INSERT Into Suppliers (SupplierName, ContactAddress, ContactEmail) VALUES    
+('Home Depot', '1518 S Providence Center Dr, Cedar City, UT 84720', 'Gerard@homedepot.com'),   
+('Small Town Suppliers', '15 E 100 S, Kansas City, KS 66012', 'AmeliaBedila@yahoomail.com'),  
+('This and That', 'PO Box 3345, Soda Springs, ID 83276', 'happygolucky@gmail.com'),  
+('Storefront Suppliers',' 1436 N 300 W, New York, NY 10001','stevensharp@storefrontsuppliers.org'),  
+('Silly Strings Suppliers','PO Box 1123, New York, NY 10005','sillystringsrep@sillystringsuppliers.com'),  
+('Region Supplier','13, Jalan SS 26/8, Taman Mayang Jaya, 47301 Petaling Jaya, Selangor, Malaysia','chen@regionalsuppliers.org'),  
+('Serra Forest Products','316 E 1400 S Suite B1, St. George, UT 84790','JamesMontrose@sierraforestproducts.com'),  
+('HP','10300 Energy Dr, Spring, TX 77389','carsonford@hpinc.com'),  
+('Hartlauer',' 3900 W Dewey Dr, Las Vegas, NV 89118','donjuan@hartlauer.com'),  
+('Multicam','DFW Airport, 1025 W Royal Ln, Dallas, TX 75261','juanrodriges@multicam.com')  
 
 select * From Suppliers;
 ![Screenshot_20221202_083831](https://user-images.githubusercontent.com/40216815/205420921-d3d0415a-6be0-4450-98e3-044071e5fc59.png)

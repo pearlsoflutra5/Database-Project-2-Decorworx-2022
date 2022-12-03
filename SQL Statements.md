@@ -2,9 +2,7 @@
 ```
 Create Database DecorworxProject2;  
 go  
-```
 
-```
 Create TABLE Customer(  
    CustomerID INT IDENTITY(1,1) PRIMARY KEY,  
    CustomerName VARCHAR(255) NOT Null,  
@@ -14,23 +12,19 @@ Create TABLE Customer(
    PhoneTextAvailable BIT Not Null,  
    ContactEmail VARCHAR(50) Not Null,   
 );
-```
 
-```
 Create Table Orders(  
-|       OrderID INT IDENTITY(1,1) PRIMARY KEY,  
-|       CustomerID INT FOREIGN KEY REFERENCES Customer(CustomerID),  
-|       EstimatedCost INT,  
-|       ShippingAddress VARCHAR(255) Not Null,  
-|       OrderSize VARCHAR(10) Not Null,  
-|       Install BIT Not Null,  
+   OrderID INT IDENTITY(1,1) PRIMARY KEY,  
+   CustomerID INT FOREIGN KEY REFERENCES Customer(CustomerID),  
+   EstimatedCost INT,  
+   ShippingAddress VARCHAR(255) Not Null,  
+   OrderSize VARCHAR(10) Not Null,  
+   Install BIT Not Null,  
 );  
-```
 
-```
 Create Table Items(  
-|       ItemID INT IDENTITY(1,1) Primary Key,  
-|       ItemName VarChar(100) Not Null,  
+   ItemID INT IDENTITY(1,1) Primary Key,  
+   ItemName VarChar(100) Not Null,  
 );
 
 Create Table OrderItems(  
@@ -78,10 +72,10 @@ Create Table Suppliers(
 );
 
 Create Table SupplierSupplies(  
-|       SupplyID INT FOREIGN KEY REFERENCES Supplies(SupplyID),  
+      SupplyID INT FOREIGN KEY REFERENCES Supplies(SupplyID),  
 |       SupplierID INT FOREIGN KEY REFERENCES Suppliers(SupplierID),  
 );
-
+```
 
 # Insert Statements
 ## Suppliers

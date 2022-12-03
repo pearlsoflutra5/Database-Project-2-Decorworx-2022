@@ -1,17 +1,22 @@
 # Create Database and Tables
+```
 Create Database DecorworxProject2;  
-go   
+go  
+```
 
+```
 Create TABLE Customer(  
-|   CustomerID INT IDENTITY(1,1) PRIMARY KEY,  
-|       CustomerName VARCHAR(255) NOT Null,  
-|       ContactPhysicalAddress VARCHAR(255) NOT Null,  
-|       ContactMailingAddress VARChar(255) NOT NULL,  
-|       ContactPhone NVARCHAR(12) Not Null Unique,   
-|       PhoneTextAvailable BIT Not Null,  
-|       ContactEmail VARCHAR(50) Not Null,   
+   CustomerID INT IDENTITY(1,1) PRIMARY KEY,  
+   CustomerName VARCHAR(255) NOT Null,  
+   ContactPhysicalAddress VARCHAR(255) NOT Null,  
+   ContactMailingAddress VARChar(255) NOT NULL,  
+   ContactPhone NVARCHAR(12) Not Null Unique,   
+   PhoneTextAvailable BIT Not Null,  
+   ContactEmail VARCHAR(50) Not Null,   
 );
+```
 
+```
 Create Table Orders(  
 |       OrderID INT IDENTITY(1,1) PRIMARY KEY,  
 |       CustomerID INT FOREIGN KEY REFERENCES Customer(CustomerID),  
@@ -20,7 +25,9 @@ Create Table Orders(
 |       OrderSize VARCHAR(10) Not Null,  
 |       Install BIT Not Null,  
 );  
+```
 
+```
 Create Table Items(  
 |       ItemID INT IDENTITY(1,1) Primary Key,  
 |       ItemName VarChar(100) Not Null,  

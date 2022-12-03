@@ -1,77 +1,78 @@
 # Create Database and Tables
-Create Database DecorworxProject2;
-go 
-Create TABLE Customer(
-    CustomerID INT IDENTITY(1,1) PRIMARY KEY,
-    CustomerName VARCHAR(255) NOT Null,
-    ContactPhysicalAddress VARCHAR(255) NOT Null,
-    ContactMailingAddress VARChar(255) NOT NULL,
-    ContactPhone NVARCHAR(12) Not Null Unique, 
-    PhoneTextAvailable BIT Not Null,
-    ContactEmail VARCHAR(50) Not Null, 
+Create Database DecorworxProject2;  
+go   
+
+Create TABLE Customer(  
+    CustomerID INT IDENTITY(1,1) PRIMARY KEY,  
+    CustomerName VARCHAR(255) NOT Null,  
+    ContactPhysicalAddress VARCHAR(255) NOT Null,  
+    ContactMailingAddress VARChar(255) NOT NULL,  
+    ContactPhone NVARCHAR(12) Not Null Unique,   
+    PhoneTextAvailable BIT Not Null,  
+    ContactEmail VARCHAR(50) Not Null,   
 );
 
-Create Table Orders(
-    OrderID INT IDENTITY(1,1) PRIMARY KEY,
-    CustomerID INT FOREIGN KEY REFERENCES Customer(CustomerID),
-    EstimatedCost INT,
-    ShippingAddress VARCHAR(255) Not Null,
-    OrderSize VARCHAR(10) Not Null,
-    Install BIT Not Null,
+Create Table Orders(  
+    OrderID INT IDENTITY(1,1) PRIMARY KEY,  
+    CustomerID INT FOREIGN KEY REFERENCES Customer(CustomerID),  
+    EstimatedCost INT,  
+    ShippingAddress VARCHAR(255) Not Null,  
+    OrderSize VARCHAR(10) Not Null,  
+    Install BIT Not Null,  
+);  
+
+Create Table Items(  
+    ItemID INT IDENTITY(1,1) Primary Key,  
+    ItemName VarChar(100) Not Null,  
 );
 
-Create Table Items(
-    ItemID INT IDENTITY(1,1) Primary Key,
-    ItemName VarChar(100) Not Null,
+Create Table OrderItems(  
+    OrderID INT FOREIGN KEY REFERENCES Orders(OrderID),  
+    ItemID INT FOREIGN Key REFERENCES Items(ItemID),  
 );
 
-Create Table OrderItems(
-    OrderID INT FOREIGN KEY REFERENCES Orders(OrderID),
-    ItemID INT FOREIGN Key REFERENCES Items(ItemID),
-);
-
-Create Table Processes(
-    ProcessID INT IDENTITY(1,1) PRIMARY KEY, 
-    ProcessName VARCHAR(50) Not Null,
-    ProcessMachine VARCHAR(50) Not Null,
-    Department VARCHAR(50) Not Null, 
+Create Table Processes(  
+    ProcessID INT IDENTITY(1,1) PRIMARY KEY,   
+    ProcessName VARCHAR(50) Not Null,  
+    ProcessMachine VARCHAR(50) Not Null,  
+    Department VARCHAR(50) Not Null,   
 );
 
 Create Table Employees(
-    EmployeeID INT IDENTITY(1,1) PRIMARY KEY,
-    EmployeeName VARCHAR(40) Not Null,
-    Experience VARCHAR(10),
+    EmployeeID INT IDENTITY(1,1) PRIMARY KEY,  
+    EmployeeName VARCHAR(40) Not Null,  
+    Experience VARCHAR(10),  
 );
 
 Create TABLE ItemProcesses (
-    ItemID INT FOREIGN KEY REFERENCES Items(ItemID),
-    ProcessID INT FOREIGN KEY REFERENCES Processes(ProcessID),
-    EmployeeID int FOREIGN KEY REFERENCES Employees(EmployeeID),
-    EmployeePercentCompleted int,
-    Specifications VARCHAR(255),
+    ItemID INT FOREIGN KEY REFERENCES Items(ItemID),  
+    ProcessID INT FOREIGN KEY REFERENCES Processes(ProcessID),  
+    EmployeeID int FOREIGN KEY REFERENCES Employees(EmployeeID),  
+    EmployeePercentCompleted int,  
+    Specifications VARCHAR(255),  
 );
 
 Create TABLE Supplies(
-    SupplyID INT IDENTITY(1,1) PRIMARY Key,
-    SupplyName VARCHAR(100) NOt Null,
-    QuantityInStock int,
+    SupplyID INT IDENTITY(1,1) PRIMARY Key,  
+    SupplyName VARCHAR(100) NOt Null,  
+    QuantityInStock int,  
 );
 
-Create Table ItemOrderSupplies (
-    ItemID INT FOREIGN KEY REFERENCES Items(ItemID),
-    SupplyID INT FOREIGN KEY REFERENCES Supplies(SupplyID),
+Create Table ItemOrderSupplies (  
+    ItemID INT FOREIGN KEY REFERENCES Items(ItemID),  
+    SupplyID INT FOREIGN KEY REFERENCES Supplies(SupplyID),  
 );
 
-Create Table Suppliers(
-    SupplierID INT IDENTITY(1,1) PRIMARY KEY,
-    SupplierName VARCHAR(50) Not NULL,
-    ContactAddress VarChar(100) NOT NULL,
-    ContactEmail VarChar(50) Not Null, 
+Create Table Suppliers(  
+    SupplierID INT IDENTITY(1,1) PRIMARY KEY,  
+    SupplierName VARCHAR(50) Not NULL,  
+    ContactAddress VarChar(100) NOT NULL,    
+    ContactEmail VarChar(50) Not Null,   
 );
 
-Create Table SupplierSupplies(
-    SupplyID INT FOREIGN KEY REFERENCES Supplies(SupplyID),
-    SupplierID INT FOREIGN KEY REFERENCES Suppliers(SupplierID),
+Create Table SupplierSupplies(  
+    SupplyID INT FOREIGN KEY REFERENCES Supplies(SupplyID),  
+    SupplierID INT FOREIGN KEY REFERENCES Suppliers(SupplierID),  
 );
 
 

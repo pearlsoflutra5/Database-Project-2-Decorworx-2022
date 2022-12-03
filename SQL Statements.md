@@ -92,7 +92,12 @@ INSERT Into Suppliers (SupplierName, ContactAddress, ContactEmail) VALUES
 select * From Suppliers;
 ![Screenshot_20221202_083831](https://user-images.githubusercontent.com/40216815/205420921-d3d0415a-6be0-4450-98e3-044071e5fc59.png)
 
+## Supplies
+
+![Screenshot_20221202_085846](https://user-images.githubusercontent.com/40216815/205421720-9c227ec3-7df1-4566-baad-71794c1f2759.png)
+Select * From Supplies;
  
+![Screenshot_20221202_085857](https://user-images.githubusercontent.com/40216815/205421728-b2d7d2d8-4666-4ce6-989b-d38b525ecd2d.png)
 
 # User Queries
 
